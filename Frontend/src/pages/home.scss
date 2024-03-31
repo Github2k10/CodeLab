@@ -1,0 +1,99 @@
+.homePageLogo {
+    height: 100px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.homePageWrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.formWrapper {
+    background: #282a36;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+footer a {
+    color: #66ffde;
+}
+
+footer a:hover {
+     color: #66ffdeae;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mainLabel {
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.inputBox {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-bottom: 14px;
+    background: #eee;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition:  all 0.3s ease-in-out;
+}
+
+.joinBtn {
+    background: #66ffde;
+    width: 100px;
+    margin-left: auto;
+}
+
+.joinBtn:hover {
+    background-color:  #282a36;
+    color: #66ffde;
+    border: 1px solid #66ffde;
+}
+
+.createInfo {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.createNewBtn {
+    color: #66ffde;
+    text-decoration: none;
+    border-bottom: 1px solid #66ffde ;
+    transition:  all 0.3s ease-in-out;
+
+}
+
+.createNewBtn:hover {
+    color: #66ffdeae;
+     border-bottom: 1px solid #66ffdeae ;
+}

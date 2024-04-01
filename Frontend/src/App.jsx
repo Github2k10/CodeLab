@@ -1,12 +1,21 @@
-import { useState } from "react";
-import "./App.scss";
+import React from 'react';
+import { BrowserRouter as Router, Route,Routes} from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import { Home } from './components';
+import './components/Navbar/Navbar.scss';
 
 function App() {
   return (
-    <>
-      <h1>CodeLab</h1>
-    </>
-  );
+    <Router>
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
+  </Router>
+  )
 }
 
 export default App;
+

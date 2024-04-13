@@ -7,7 +7,7 @@ import style from "./NavBar.module.scss";
 import axios from "axios";
 
 const NavBar = () => {
-  const [isLoggedIn, setLoggedIn] = useState(true);
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
     axios
@@ -21,7 +21,7 @@ const NavBar = () => {
       })
       .catch((err) => {
         if (err.response.status == 401) {
-          setLoggedIn(true);
+          setLoggedIn(false);
         }
 
         console.log(err);

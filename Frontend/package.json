@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "private": true,
+  "proxy": "http://localhost:8000",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,10 +11,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@monaco-editor/react": "^4.6.0",
+    "axios": "^1.6.8",
+    "monaco-editor": "^0.44.0",
     "react": "^18.2.0",
+    "react-cookie": "^7.1.4",
     "react-dom": "^18.2.0",
+    "react-monaco-editor": "^0.55.0",
+    "react-router-dom": "^6.22.3",
     "sass": "^1.72.0",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "socket.io-client": "^4.7.5",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

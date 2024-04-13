@@ -1,0 +1,136 @@
+.login-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  .login{
+    display: flex;
+    padding: 50px;
+    height: 85vh;
+
+    .login-box{
+      margin: auto;
+
+      h1{
+        font-size: 24px;
+        font-weight: 500;
+        color: rgba(47, 43, 61, 0.9);
+        line-height: 38px;
+        padding-bottom: 5px;
+      }
+
+      .login-p{
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22px;
+        color: rgba(47, 43, 61, 0.7);
+      }
+      
+      .example{
+        background-color: #e8e7fd;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 20px 0px;
+
+        p{
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 20px;
+          color: #7367f0;
+        }
+      }
+
+      .login-form{
+        label{
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 20px;
+          color: rgba(47, 43, 61, 0.9);
+
+          &::placeholder{
+            color: rgba(47, 43, 61, 0.3);
+          }
+        }
+
+        .input-tag{
+          width: 91%;
+          padding: 5px 15px;
+          margin-bottom: 20px;
+
+          font-size: 15px;
+          line-height: 24px;
+          font-weight: 500;
+          color: rgba(47, 43, 61, 0.9);
+
+          border: 1px solid rgba(47, 43, 61, 0.3);
+          border-radius: 5px;
+
+          &:hover{
+            border-color: rgba(47, 43, 61, 0.6);
+          }
+
+          &:focus-visible{
+            border-color: #7367f0;
+          }
+        }
+
+        .check-box{
+          display: flex;
+          justify-content: space-between;
+          margin: 15px 0px;
+
+          div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            color: rgba(47, 43, 61, 0.9);
+
+            input{
+              width: 16px;
+              height: 16px;
+              margin-right: 5px;
+            }
+          }
+
+          a{
+            color: #7367f0;
+            text-decoration: none;
+            font-weight: 500;
+          }
+        }
+
+        .submit-btn{
+          width: 100%;
+          text-align: center;
+          padding: 8px;
+          background-color: #7367f0;
+          border-radius: 5px;
+          border: 0px;
+          margin: 20px 0px;
+
+          font-size: 15px;
+          line-height: 22px;
+          color: #ffffff;
+        }
+
+      }
+
+      .span{
+        text-align: center;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 400;
+        color: rgba(47, 43, 61, 0.9);
+
+        a{
+          text-decoration: none;
+          font-weight: 500;
+          color: #7367f0;
+        }
+      }
+    }
+  }
+}

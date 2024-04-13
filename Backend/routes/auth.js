@@ -173,7 +173,8 @@ router.post("/login", async (req, res) => {
     );
 
     res.cookie("AuthToken", token, { maxAge: 600000000, httpOnly: true });
-
+    console.log("login token: ", token)
+    
     res.status(200).json({
       userId: user._id,
       username: user.username,

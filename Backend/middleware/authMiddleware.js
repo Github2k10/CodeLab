@@ -19,6 +19,7 @@ const verifyToken = (req, res, next) => {
   try {
     // Extract the token from the AuthorizationToken header
     const token = req.cookies.AuthToken;
+    console.log("meddleware token: ", token)
 
     // If no token is provided, send a 401 Unauthorized response
     if (!token) {

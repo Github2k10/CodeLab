@@ -23,6 +23,10 @@ router.post("/addRoom", verifyToken, async (req, res) => {
   }
 });
 
+router.get("/isLoggedIn", verifyToken, (req, res) => {
+  return res.status(200).json({ login: true, message: "User Logged In" });
+});
+
 router.get("/logout", verifyToken, (req, res) => {
   res.cookie("AuthToken", "", { maxAge: 0 });
 

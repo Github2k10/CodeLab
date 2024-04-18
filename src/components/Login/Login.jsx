@@ -5,6 +5,9 @@ import { Link, useNavigate } from "react-router-dom";
 
 import "./Login.scss";
 
+const baseURL = "https://code-lab-backend-one.vercel.app";
+// const baseURL = "http://localhost:8000";
+
 const Login = () => {
   const [cookies, setCookie] = useCookies(["user"]);
   const navigate = useNavigate();
@@ -17,28 +20,37 @@ const Login = () => {
     const password = e.target.password.value;
 
     axios
-      .post("http://localhost:8000/user/login", {
-        email: email,
-        password: password,
-      })
+      .post(
+        `${baseURL}/user/login`,
+        {
+          email: email,
+          password: password,
+        },
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
+        console.log(res);
         setCookie("email", email, { path: "/" });
         setCookie("username", res.data.username, { path: "/" });
         setCookie("userId", res.data.userId, { path: "/" });
+        setCookie("AuthToken", res.data.AuthToken, {path: "/"})
 
         navigate("/");
       })
       .catch((err) => {
-        if(err.request.status == 400){
-          alert("Email or Passwrod Missing.")
+        console.log(err)
+        if (err.request.status == 400) {
+          alert("Email or Passwrod Missing.");
         }
 
-        if(err.request.status == 401){
-          alert("Authentication failed: Wrong Email or Password.")
+        if (err.request.status == 401) {
+          alert("Authentication failed: Wrong Email or Password.");
         }
 
-        if(err.request.status == 500){
-          alert("Ops!!! Server Error.")
+        if (err.request.status == 500) {
+          alert("Ops!!! Server Error.");
         }
       });
 

@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { v4 as uuidV4 } from "uuid";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { Editor, ErrorPage, Login, SignUp } from "./components";
+import { EditorLayout, ErrorPage, Login, SignUp } from "./components";
+import EditorHelper from "./constant/EditorHelper.jsx";
 import App from "./App.jsx";
 import "./index.css";
 
@@ -24,12 +24,11 @@ const router = new createBrowserRouter([
   },
   {
     path: "/editor",
-    element: <div>
-    </div>
+    element: <EditorHelper />,
   },
   {
     path: "/editor/:roomId",
-    element: <Editor />,
+    element: <EditorLayout />,
   },
 ]);
 

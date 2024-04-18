@@ -5,6 +5,9 @@ import { Link, useNavigate } from "react-router-dom";
 
 import "./SignUp.scss";
 
+const baseURL = "https://code-lab-backend-one.vercel.app";
+// const baseURL = "http://localhost:8000";
+
 const SignUp = () => {
   const [cookies, setCookie] = useCookies(["username"]);
   const navigate = useNavigate();
@@ -32,15 +35,19 @@ const SignUp = () => {
     }
 
     axios
-      .post("http://localhost:8000/user/register", {
+      .post(`${baseURL}/user/register`, {
         username: username,
         email: email,
         password: password,
+      }, {
+        withCredentials: true
       })
       .then((res) => {
         setCookie("email", email, { path: "/" });
         setCookie("username", res.data.username, { path: "/" });
         setCookie("userId", res.data.userId, { path: "/" });
+        setCookie("AuthToken", res.data.AuthToken, {path: "/"})
+
         navigate("/");
       })
       .catch((error) => {

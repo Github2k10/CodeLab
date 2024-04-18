@@ -18,14 +18,14 @@ const jwt = require("jsonwebtoken");
 const verifyToken = (req, res, next) => {
   try {
     // Extract the token from the AuthorizationToken header
+    console.log(req.cookies);
     const token = req.cookies.AuthToken;
-    console.log("meddleware token: ", token)
 
     // If no token is provided, send a 401 Unauthorized response
     if (!token) {
       return res.status(401).json({ error: "Access denied" });
     }
-    
+
     // Verify the token and decode it
     const decode = jwt.verify(token, process.env.SECERT_KEY);
 

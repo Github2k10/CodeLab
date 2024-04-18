@@ -68,7 +68,6 @@ const NavBar = () => {
     if (token) {
       axios
         .get(`${baseURL}/protected/isLoggedIn`, {
-          withCredentials: true,
           headers: {
             "Content-Type": "application/json",
             Authorization: "Bearer " + token,

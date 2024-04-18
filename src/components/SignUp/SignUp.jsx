@@ -39,8 +39,6 @@ const SignUp = () => {
         username: username,
         email: email,
         password: password,
-      }, {
-        withCredentials: true
       })
       .then((res) => {
         setCookie("email", email, { path: "/" });

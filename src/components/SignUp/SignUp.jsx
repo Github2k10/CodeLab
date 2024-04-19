@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import "./SignUp.scss";
 
-const baseURL = "https://code-lab-backend-one.vercel.app";
+const baseURL = "https://beneficial-coherent-butterfly.glitch.me/";
 // const baseURL = "http://localhost:8000";
 
 const SignUp = () => {

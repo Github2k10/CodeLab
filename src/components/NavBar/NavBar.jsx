@@ -10,7 +10,7 @@ import "../../style/btn1.scss";
 import "../../style/btn2.scss";
 import style from "./NavBar.module.scss";
 
-const baseURL = "https://code-lab-backend-one.vercel.app";
+const baseURL = "https://beneficial-coherent-butterfly.glitch.me/";
 // const baseURL = "http://localhost:8000";
 
 const NavBar = () => {
@@ -21,10 +21,9 @@ const NavBar = () => {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [isBoxVisible, setIsBoxVisible] = useState(false);
 
-  // console.log(location.pathname.split("/"));
   const isONEditorPage = null;
   const roomId = param.roomId;
-  const shareableLink = `http://localhost:5173/editor/${roomId}`;
+  const shareableLink = `${baseURL}editor/${roomId}`;
 
   const createFile = () => {
     const roomId = uuidV4();

@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const baseURL = "https://code-lab-backend-one.vercel.app";
+const baseURL = "https://beneficial-coherent-butterfly.glitch.me/";
 // const baseURL = "http://localhost:8000";
 
 const initSocket = async () => {

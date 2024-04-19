@@ -1,11 +1,18 @@
-import React, { useCallback, useState } from "react";
-import Editor from "@monaco-editor/react";
+import React from "react";
+import { v4 as uuidV4 } from "uuid";
+import { useNavigate } from "react-router-dom";
 
 import style from "./App.module.scss";
 import { NavBar } from "./components";
-import { images } from "./constant";
 
 function App() {
+  const navigate = useNavigate();
+
+  const createFile = () => {
+    const roomId = uuidV4();
+    navigate(`/editor/${roomId}`);
+  };
+
   return (
     <>
       <NavBar />
@@ -22,7 +29,7 @@ function App() {
               interviews, pair programming, teaching... you name it.
             </p>
 
-            <div className={`${style.new__file} app__flex`}>
+            <div onClick={createFile} className={`${style.new__file} app__flex`}>
               <svg
                 aria-hidden="true"
                 focusable="false"

@@ -23,12 +23,12 @@ const router = new createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/editor",
-    element: <EditorHelper />,
-  },
-  {
     path: "/editor/:roomId",
     element: <EditorLayout />,
+  },
+  {
+    path: "/editor",
+    element: <EditorHelper />,
   },
 ]);
 

@@ -23,7 +23,7 @@ const NavBar = () => {
 
   const isONEditorPage = null;
   const roomId = param.roomId;
-  const shareableLink = `${baseURL}editor/${roomId}`;
+  const shareableLink = `https://codelab-live.netlify.app/editor/${roomId}`;
 
   const createFile = () => {
     const roomId = uuidV4();
